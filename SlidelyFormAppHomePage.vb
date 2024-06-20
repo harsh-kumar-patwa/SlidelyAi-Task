@@ -2,45 +2,51 @@
 
 
 Public Class SlidelyFormAppHomePage
-        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnViewSubmissions.Click
 
-        End Sub
-
-        Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCreateSubmission.Click
-
-        End Sub
-
-        Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        End Sub
-
-        Private Sub btnViewSubmissions_KeyDown(sender As Object, e As KeyEventArgs) Handles btnViewSubmissions.KeyDown
-            If e.Control AndAlso e.KeyCode = Keys.V Then
-
-                btnViewSubmissions.PerformClick()
+    Private Sub SlidelyFormAppHomePage_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.N Then
+            ' Check if ViewSubmissions form is not already open
+            If Not IsViewSubmissionFormOpen() Then
+                OpenCreateSubmissionForm()
             End If
-        End Sub
+        End If
 
-        Private Sub btnViewSubmissions_Click(sender As Object, e As EventArgs) Handles btnViewSubmissions.Click
-        ' Code to open View Submissions form
-        Dim viewForm As New ViewSubmissions()
-        viewForm.Show()
-        End Sub
-
-        Private Sub btnCreateSubmission_Click(sender As Object, e As EventArgs) Handles btnCreateSubmission.Click
-        ' Code to open Create Submission form
+        If e.Control AndAlso e.KeyCode = Keys.V Then
+            OpenViewSubmissionsForm()
+        End If
+    End Sub
+    Private Sub OpenCreateSubmissionForm()
         Dim createForm As New CreateSubmissions()
         createForm.Show()
-        End Sub
+    End Sub
 
-        Private Sub btnCreateSubmission_KeyDown(sender As Object, e As KeyEventArgs) Handles btnCreateSubmission.KeyDown
-            If e.Control AndAlso e.KeyCode = Keys.N Then
-                btnCreateSubmission.PerformClick()
+    Private Sub OpenViewSubmissionsForm()
+        Dim viewForm As New ViewSubmissions()
+        viewForm.Show()
+    End Sub
+
+    'view submission
+
+    Private Sub btnViewSubmissions_Click(sender As Object, e As EventArgs) Handles btnViewSubmissions.Click
+        OpenViewSubmissionsForm()
+
+    End Sub
+
+    'create submission
+    Private Sub btnCreateSubmission_Click(sender As Object, e As EventArgs) Handles btnCreateSubmission.Click
+        OpenCreateSubmissionForm()
+    End Sub
+
+
+
+    Private Function IsViewSubmissionFormOpen() As Boolean
+        For Each form As Form In Application.OpenForms
+            If TypeOf form Is ViewSubmissions Then
+                Return True
             End If
-        End Sub
+        Next
+        Return False
+    End Function
 
-        Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-        End Sub
-    End Class
+End Class
 

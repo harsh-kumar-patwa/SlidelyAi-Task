@@ -59,6 +59,7 @@ Partial Class SlidelyFormAppHomePage
         TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(12, 12)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(432, 27)
         TextBox1.TabIndex = 2
         TextBox1.Text = "Harsh Kumar , Slidely Task 2 - Slidely Form App"

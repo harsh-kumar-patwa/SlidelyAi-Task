@@ -19,3 +19,4 @@ C:\Users\Harsh\source\repos\SlidelyFormApp\SlidelyFormApp\obj\Debug\net8.0-windo
 C:\Users\Harsh\source\repos\SlidelyFormApp\SlidelyFormApp\obj\Debug\net8.0-windows\SlidelyFormApp.pdb
 C:\Users\Harsh\source\repos\SlidelyFormApp\SlidelyFormApp\obj\Debug\net8.0-windows\SlidelyFormApp.genruntimeconfig.cache
 C:\Users\Harsh\source\repos\SlidelyFormApp\SlidelyFormApp\obj\Debug\net8.0-windows\ref\SlidelyFormApp.dll
+C:\Users\Harsh\source\repos\SlidelyFormApp\SlidelyFormApp\obj\Debug\net8.0-windows\SlidelyFormApp.sourcelink.json
