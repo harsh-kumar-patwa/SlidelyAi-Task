@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("SlidelyFormApp"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16684502956fe918834ab12ba35611b20211314a"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+844152d55bef44c3e352716c095c890c8ae6d3bc"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("SlidelyFormApp"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("SlidelyFormApp"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

@@ -72,11 +72,13 @@ Partial Class CreateSubmissions
         ' 
         ' TextBox9
         ' 
+        TextBox9.BackColor = Color.White
         TextBox9.BorderStyle = BorderStyle.None
-        TextBox9.Font = New Font("Segoe UI", 12F)
+        TextBox9.Font = New Font("Segoe UI", 12.0F)
         TextBox9.Location = New Point(12, 294)
         TextBox9.Multiline = True
         TextBox9.Name = "TextBox9"
+        TextBox9.ReadOnly = True
         TextBox9.Size = New Size(139, 59)
         TextBox9.TabIndex = 23
         TextBox9.Text = "Github Link For Task2 "
@@ -93,10 +95,12 @@ Partial Class CreateSubmissions
         ' 
         ' TextBox7
         ' 
+        TextBox7.BackColor = Color.White
         TextBox7.BorderStyle = BorderStyle.None
-        TextBox7.Font = New Font("Segoe UI", 12F)
+        TextBox7.Font = New Font("Segoe UI", 12.0F)
         TextBox7.Location = New Point(12, 231)
         TextBox7.Name = "TextBox7"
+        TextBox7.ReadOnly = True
         TextBox7.Size = New Size(139, 27)
         TextBox7.TabIndex = 21
         TextBox7.Text = "Phone Num"
@@ -113,10 +117,12 @@ Partial Class CreateSubmissions
         ' 
         ' TextBox5
         ' 
+        TextBox5.BackColor = Color.White
         TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Font = New Font("Segoe UI", 12F)
+        TextBox5.Font = New Font("Segoe UI", 12.0F)
         TextBox5.Location = New Point(12, 166)
         TextBox5.Name = "TextBox5"
+        TextBox5.ReadOnly = True
         TextBox5.Size = New Size(139, 27)
         TextBox5.TabIndex = 19
         TextBox5.Text = "Email"
@@ -133,10 +139,12 @@ Partial Class CreateSubmissions
         ' 
         ' TextBox2
         ' 
+        TextBox2.BackColor = Color.White
         TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Font = New Font("Segoe UI", 12F)
+        TextBox2.Font = New Font("Segoe UI", 12.0F)
         TextBox2.Location = New Point(12, 104)
         TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
         TextBox2.Size = New Size(139, 27)
         TextBox2.TabIndex = 17
         TextBox2.Text = "Name"
@@ -146,9 +154,10 @@ Partial Class CreateSubmissions
         ' 
         TextBox1.BackColor = SystemColors.Window
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(12, 34)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(432, 27)
         TextBox1.TabIndex = 16
         TextBox1.Text = "Harsh Kumar , Slidely Task 2 - Create Submissions"
@@ -169,7 +178,7 @@ Partial Class CreateSubmissions
         ' 
         ' CreateSubmissions
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(456, 555)
