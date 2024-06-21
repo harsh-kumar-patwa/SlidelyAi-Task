@@ -20,6 +20,7 @@ Public Class CreateSubmissions
         timer.Start()
         UpdateStopwatchLabel()
     End Sub
+
     Private Sub Timer_Tick(sender As Object, e As EventArgs)
         UpdateStopwatchLabel()
     End Sub
@@ -51,24 +52,30 @@ Public Class CreateSubmissions
 
     Private Async Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Dim submission = New With {
-            .name = textName.Text,
-            .email = textEmail.Text,
-            .phone = textPhone.Text,
-            .github_link = textGithub.Text,
-            .stopwatch_time = labelStopwatchTime.Text
+            .Name = textName.Text,
+            .Email = textEmail.Text,
+            .Phone = textPhone.Text,
+            .GithubLink = textGithub.Text,
+            .StopwatchTime = labelStopwatchTime.Text
         }
 
         Dim client As New HttpClient()
         client.DefaultRequestHeaders.Accept.Add(New System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"))
         Dim jsonData = JsonConvert.SerializeObject(submission)
         Dim content = New StringContent(jsonData, System.Text.Encoding.UTF8, "application/json")
-        Dim response = Await client.PostAsync("http://localhost:3000/submit", content)
 
-        If response.IsSuccessStatusCode Then
-            MessageBox.Show("Submission successful!")
-        Else
-            MessageBox.Show("Submission failed.")
-        End If
+        Try
+            Dim response = Await client.PostAsync("http://localhost:3000/submit", content)
+            Dim responseBody = Await response.Content.ReadAsStringAsync()
+
+            If response.IsSuccessStatusCode Then
+                MessageBox.Show("Submission successful!")
+            Else
+                MessageBox.Show($"Submission failed: {responseBody}")
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}")
+        End Try
     End Sub
 
     Private Sub btnToggleStopwatch_KeyDown(sender As Object, e As KeyEventArgs) Handles btnToggleStopwatch.KeyDown

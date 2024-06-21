@@ -29,19 +29,19 @@ Partial Class ViewSubmissions
         TextBox5 = New TextBox()
         textPhone = New TextBox()
         TextBox7 = New TextBox()
-        textGithub = New TextBox()
         TextBox9 = New TextBox()
-        textStopwatchTime = New TextBox()
         TextBox11 = New TextBox()
         btnPrevious = New Button()
         btnNext = New Button()
+        textGithub = New TextBox()
+        textStopwatchTime = New TextBox()
         SuspendLayout()
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = SystemColors.Window
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(12, 12)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(432, 27)
@@ -52,7 +52,7 @@ Partial Class ViewSubmissions
         ' TextBox2
         ' 
         TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Font = New Font("Segoe UI", 12.0F)
+        TextBox2.Font = New Font("Segoe UI", 12F)
         TextBox2.Location = New Point(12, 82)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(139, 27)
@@ -83,7 +83,7 @@ Partial Class ViewSubmissions
         ' TextBox5
         ' 
         TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Font = New Font("Segoe UI", 12.0F)
+        TextBox5.Font = New Font("Segoe UI", 12F)
         TextBox5.Location = New Point(12, 144)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(139, 27)
@@ -104,7 +104,7 @@ Partial Class ViewSubmissions
         ' TextBox7
         ' 
         TextBox7.BorderStyle = BorderStyle.None
-        TextBox7.Font = New Font("Segoe UI", 12.0F)
+        TextBox7.Font = New Font("Segoe UI", 12F)
         TextBox7.Location = New Point(12, 209)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(139, 27)
@@ -112,20 +112,10 @@ Partial Class ViewSubmissions
         TextBox7.Text = "Phone Num"
         TextBox7.TextAlign = HorizontalAlignment.Center
         ' 
-        ' textGithub
-        ' 
-        textGithub.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        textGithub.BorderStyle = BorderStyle.FixedSingle
-        textGithub.Location = New Point(157, 285)
-        textGithub.Name = "textGithub"
-        textGithub.ReadOnly = True
-        textGithub.Size = New Size(262, 27)
-        textGithub.TabIndex = 11
-        ' 
         ' TextBox9
         ' 
         TextBox9.BorderStyle = BorderStyle.None
-        TextBox9.Font = New Font("Segoe UI", 12.0F)
+        TextBox9.Font = New Font("Segoe UI", 12F)
         TextBox9.Location = New Point(12, 272)
         TextBox9.Multiline = True
         TextBox9.Name = "TextBox9"
@@ -134,20 +124,10 @@ Partial Class ViewSubmissions
         TextBox9.Text = "Github Link For Task2 "
         TextBox9.TextAlign = HorizontalAlignment.Center
         ' 
-        ' textStopwatchTime
-        ' 
-        textStopwatchTime.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        textStopwatchTime.BorderStyle = BorderStyle.FixedSingle
-        textStopwatchTime.Location = New Point(157, 350)
-        textStopwatchTime.Name = "textStopwatchTime"
-        textStopwatchTime.ReadOnly = True
-        textStopwatchTime.Size = New Size(262, 27)
-        textStopwatchTime.TabIndex = 13
-        ' 
         ' TextBox11
         ' 
         TextBox11.BorderStyle = BorderStyle.None
-        TextBox11.Font = New Font("Segoe UI", 12.0F)
+        TextBox11.Font = New Font("Segoe UI", 12F)
         TextBox11.Location = New Point(12, 346)
         TextBox11.Multiline = True
         TextBox11.Name = "TextBox11"
@@ -181,17 +161,37 @@ Partial Class ViewSubmissions
         btnNext.Text = "NEXT (CTRL+N)"
         btnNext.UseVisualStyleBackColor = False
         ' 
+        ' textGithub
+        ' 
+        textGithub.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        textGithub.BorderStyle = BorderStyle.FixedSingle
+        textGithub.Location = New Point(157, 286)
+        textGithub.Name = "textGithub"
+        textGithub.ReadOnly = True
+        textGithub.Size = New Size(262, 27)
+        textGithub.TabIndex = 16
+        ' 
+        ' textStopwatchTime
+        ' 
+        textStopwatchTime.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        textStopwatchTime.BorderStyle = BorderStyle.FixedSingle
+        textStopwatchTime.Location = New Point(157, 351)
+        textStopwatchTime.Name = "textStopwatchTime"
+        textStopwatchTime.ReadOnly = True
+        textStopwatchTime.Size = New Size(262, 27)
+        textStopwatchTime.TabIndex = 17
+        ' 
         ' ViewSubmissions
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(456, 555)
+        Controls.Add(textStopwatchTime)
+        Controls.Add(textGithub)
         Controls.Add(btnNext)
         Controls.Add(btnPrevious)
-        Controls.Add(textStopwatchTime)
         Controls.Add(TextBox11)
-        Controls.Add(textGithub)
         Controls.Add(TextBox9)
         Controls.Add(textPhone)
         Controls.Add(TextBox7)
@@ -213,10 +213,10 @@ Partial Class ViewSubmissions
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents textPhone As TextBox
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents textGithub As TextBox
     Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents textStopwatchTime As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents btnPrevious As Button
     Friend WithEvents btnNext As Button
+    Friend WithEvents textGithub As TextBox
+    Friend WithEvents textStopwatchTime As TextBox
 End Class
