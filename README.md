@@ -59,6 +59,12 @@ cd SlidelyFormApp
 ![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/9c025b20-1c53-4ff6-a5e8-edb993df6378)
 
 
+### View Submission Page
+
+#### See all the submissions by clicking Previous (CTRL+P) or Next (CTRL+N)
+
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/36eb0f2b-3928-4f7c-9258-553b57e29ae2)
+
 
 
 
