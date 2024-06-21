@@ -1,4 +1,4 @@
-# Overview 
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/0b96530f-a26d-4c47-934c-8a610e7daa50)# Overview 
 
 This is the frontend of an app which is similar to a google from . Here we can create submissions and can also see them . 
 
@@ -20,6 +20,8 @@ First, clone the repository to your local machine using Git. Open your terminal 
 git clone https://github.com/harsh-kumar-patwa/google-form-alternative.git
 cd SlidelyFormApp
 ```
+
+## First run backend file and local host before trying out next steps. 
 
 ### 2. Open the Project in Visual Studio
 
