@@ -65,6 +65,19 @@ Public Class ViewSubmissions
 
 
     End Sub
+    Private Sub ViewSubmissions_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.P Then
+            If currentIndex > 0 Then
+                DisplaySubmission(currentIndex - 1)
+            End If
+        End If
+
+        If e.Control AndAlso e.KeyCode = Keys.N Then
+            If currentIndex < submissions.Count - 1 Then
+                DisplaySubmission(currentIndex + 1)
+            End If
+        End If
+    End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
@@ -78,21 +91,6 @@ Public Class ViewSubmissions
 
     End Sub
 
-    Private Sub btnViewSubmissions_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
 
-    End Sub
 
-    Private Sub btnPrevious_KeyDown(sender As Object, e As KeyEventArgs) Handles btnPrevious.KeyDown
-        If e.Control AndAlso e.KeyCode = Keys.P Then
-            btnPrevious.PerformClick()
-
-        End If
-    End Sub
-
-    Private Sub btnNext_KeyDown(sender As Object, e As KeyEventArgs) Handles btnNext.KeyDown
-        If e.Control AndAlso e.KeyCode = Keys.N Then
-            btnNext.PerformClick()
-
-        End If
-    End Sub
 End Class
