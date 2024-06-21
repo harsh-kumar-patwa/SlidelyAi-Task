@@ -61,6 +61,8 @@ Public Class ViewSubmissions
         End If
     End Sub
     Private Sub ViewSubmissions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.KeyPreview = True
+
 
     End Sub
 

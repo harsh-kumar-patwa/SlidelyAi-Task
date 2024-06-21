@@ -20,7 +20,7 @@ Partial Class ViewSubmissions
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         TextBox1 = New TextBox()
         TextBox2 = New TextBox()
@@ -41,9 +41,10 @@ Partial Class ViewSubmissions
         ' 
         TextBox1.BackColor = SystemColors.Window
         TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(12, 12)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(432, 27)
         TextBox1.TabIndex = 3
         TextBox1.Text = "Harsh Kumar , Slidely Task 2 - View Submissions"
@@ -51,10 +52,12 @@ Partial Class ViewSubmissions
         ' 
         ' TextBox2
         ' 
+        TextBox2.BackColor = Color.White
         TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Font = New Font("Segoe UI", 12F)
+        TextBox2.Font = New Font("Segoe UI", 12.0F)
         TextBox2.Location = New Point(12, 82)
         TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
         TextBox2.Size = New Size(139, 27)
         TextBox2.TabIndex = 4
         TextBox2.Text = "Name"
@@ -82,10 +85,12 @@ Partial Class ViewSubmissions
         ' 
         ' TextBox5
         ' 
+        TextBox5.BackColor = Color.White
         TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Font = New Font("Segoe UI", 12F)
+        TextBox5.Font = New Font("Segoe UI", 12.0F)
         TextBox5.Location = New Point(12, 144)
         TextBox5.Name = "TextBox5"
+        TextBox5.ReadOnly = True
         TextBox5.Size = New Size(139, 27)
         TextBox5.TabIndex = 6
         TextBox5.Text = "Email"
@@ -103,10 +108,12 @@ Partial Class ViewSubmissions
         ' 
         ' TextBox7
         ' 
+        TextBox7.BackColor = Color.White
         TextBox7.BorderStyle = BorderStyle.None
-        TextBox7.Font = New Font("Segoe UI", 12F)
+        TextBox7.Font = New Font("Segoe UI", 12.0F)
         TextBox7.Location = New Point(12, 209)
         TextBox7.Name = "TextBox7"
+        TextBox7.ReadOnly = True
         TextBox7.Size = New Size(139, 27)
         TextBox7.TabIndex = 8
         TextBox7.Text = "Phone Num"
@@ -114,11 +121,13 @@ Partial Class ViewSubmissions
         ' 
         ' TextBox9
         ' 
+        TextBox9.BackColor = Color.White
         TextBox9.BorderStyle = BorderStyle.None
-        TextBox9.Font = New Font("Segoe UI", 12F)
+        TextBox9.Font = New Font("Segoe UI", 12.0F)
         TextBox9.Location = New Point(12, 272)
         TextBox9.Multiline = True
         TextBox9.Name = "TextBox9"
+        TextBox9.ReadOnly = True
         TextBox9.Size = New Size(139, 59)
         TextBox9.TabIndex = 10
         TextBox9.Text = "Github Link For Task2 "
@@ -126,11 +135,13 @@ Partial Class ViewSubmissions
         ' 
         ' TextBox11
         ' 
+        TextBox11.BackColor = Color.White
         TextBox11.BorderStyle = BorderStyle.None
-        TextBox11.Font = New Font("Segoe UI", 12F)
+        TextBox11.Font = New Font("Segoe UI", 12.0F)
         TextBox11.Location = New Point(12, 346)
         TextBox11.Multiline = True
         TextBox11.Name = "TextBox11"
+        TextBox11.ReadOnly = True
         TextBox11.Size = New Size(139, 54)
         TextBox11.TabIndex = 12
         TextBox11.Text = "Stopwatch Time"
@@ -183,7 +194,7 @@ Partial Class ViewSubmissions
         ' 
         ' ViewSubmissions
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(456, 555)
@@ -200,6 +211,7 @@ Partial Class ViewSubmissions
         Controls.Add(textName)
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)
+        KeyPreview = True
         Name = "ViewSubmissions"
         Text = "Form1"
         ResumeLayout(False)
