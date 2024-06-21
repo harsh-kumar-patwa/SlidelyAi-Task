@@ -34,6 +34,34 @@ cd SlidelyFormApp
 ### 3. To execute the app 
 
 * CLick on the triangular icon ![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/cb4fafc2-88dc-4a6b-a9c9-613ce88236eb)
+
+## Demo 
+
+### HomePage
+
+#### Click on Create New Submission or Press CTRL+N to create one.
+
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/34d825f1-322a-4f46-a5e2-39f5333ea036)  
+
+
+ ### Create New Submission Page
+
+#### Fill all the details and Click on submit or Press CTRL+S to submit.
   
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/44170244-28d6-45d5-8d11-d1daeb2bb254)  
+ 
+
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/2b475ced-9f19-437a-b89c-5937b17abaa4)  
+
+
+ #### Click on Ok
+
+![image](https://github.com/harsh-kumar-patwa/google-form-alternative/assets/135590545/9c025b20-1c53-4ff6-a5e8-edb993df6378)
+
+
+
+
+
+
 
 
