@@ -9,7 +9,18 @@ Public Class CreateSubmissions
     Private isStopwatchRunning As Boolean = False
     Private WithEvents timer As Timer
 
+    Private Sub CreateSubmissions_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control AndAlso e.KeyCode = Keys.T Then
+            StopwatchToggle()
+        End If
+
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            CreateSubmissionsMethod()
+        End If
+    End Sub
+
     Private Sub CreateSubmissions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.KeyPreview = True
         timer = New Timer()
         timer.Interval = 50 ' 1000 milliseconds = 1 second
         AddHandler timer.Tick, AddressOf Timer_Tick
@@ -33,6 +44,11 @@ Public Class CreateSubmissions
     End Sub
 
     Private Sub btnToggleStopwatch_Click(sender As Object, e As EventArgs) Handles btnToggleStopwatch.Click
+        stopwatchToggle()
+
+    End Sub
+
+    Private Sub StopwatchToggle()
         If isStopwatchRunning Then
             stopwatch.Stop()
             isStopwatchRunning = False
@@ -50,7 +66,11 @@ Public Class CreateSubmissions
         labelStopwatchTime.Text = stopwatch.Elapsed.ToString("mm\:ss\:ff")
     End Sub
 
-    Private Async Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        CreateSubmissionsMethod()
+    End Sub
+
+    Private Async Sub CreateSubmissionsMethod()
         Dim submission = New With {
             .Name = textName.Text,
             .Email = textEmail.Text,
@@ -78,15 +98,5 @@ Public Class CreateSubmissions
         End Try
     End Sub
 
-    Private Sub btnToggleStopwatch_KeyDown(sender As Object, e As KeyEventArgs) Handles btnToggleStopwatch.KeyDown
-        If e.Control AndAlso e.KeyCode = Keys.T Then
-            btnToggleStopwatch.PerformClick()
-        End If
-    End Sub
 
-    Private Sub btnSubmit_KeyDown(sender As Object, e As KeyEventArgs) Handles btnSubmit.KeyDown
-        If e.Control AndAlso e.KeyCode = Keys.S Then
-            btnSubmit.PerformClick()
-        End If
-    End Sub
 End Class
